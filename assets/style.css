@@ -1,0 +1,23 @@
+body {
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: peachpuff;
+    background: linear-gradient(to right, blue, rgb(10, 10, 115));
+}
+#box{
+    background-color: red;
+}
+button {
+    transition-duration: 0.4s;
+  }
+  
+  button:hover {
+    background-color: #1100ff; /* Green */
+    color: white;
+  }
