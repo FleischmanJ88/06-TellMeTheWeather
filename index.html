@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <title>Weather Dashboard</title>
 </head>
 
@@ -16,10 +19,14 @@
         <h1>Weather Dashboard</h1>
     </header>
     <main>
+        <form id="form">
+            <input type="text" autofocus id="input"/>
+            <p id="feedback"></p>
+        </form>
         <aside id="searchBox">
             <br class="search">
             <h2>Enter your city:</h2>
-            <input type="text" placeholder="enter your city here" id="cityBox"></br>
+            <input type="text" placeholder="Enter your city here" id="cityBox"></br>
             <div id="box">
                 <button class="button" class="btn btn-success" id="searchButton">Search</button>
             </div>
@@ -32,36 +39,30 @@
 
             <div id="currentWeather">
                 <div id="currentWeatherData">
-                    <h2><span id="chosenCity"></span></h2>
+                    <h2><span id="city"></span></h2>
                     <img id="currentIcon">
                     <h4>Temperature: <span id="currentTemp"></span> *F</h4>
                     <h4>Wind: <span id="currentWind"></span> MPH</h4>
                     <h4>Humidity: <span id="currentHumidity"></span> %</h4>
                 </div>
             </div>
-            <div class="btn-group">
-                <button class="button">Button</button>
-                <button class="button">Button</button>
-                <button class="button">Button</button>
-                <button class="button">Button</button>
-              </div>
-              
-            <div id="forecast">
 
-                <h2>5-day Forecast: </h2>
+            <div id="weatherForecast">
+
+                <h2>5-day forecast: </h2>
 
                 <div id="weatherForecastCards">
 
-                    <div class="forecastCard" id="first">
+                    <div class="card" id="1">
                         <h3><span id="date1"></span></h3>
                         <img id="icon1">
-                        <h4>Temp: <span id="temp1"></span></h4>
+                        <h4>Temp: <span id="temp"></span></h4>
                         <h4>Wind: <span id="wind1"></span></h4>
-                        <h4>Humidity: <span id="humidity1">%</span></h4>
+                        <h4>Humidity: <span id="humidity1"></span>%</h4>
 
                     </div>
 
-                    <div class="forecastCard" id="second">
+                    <div class="card" id="2">
                         <h3><span id="date2"></span></h3>
                         <img id="icon2">
                         <h4>Temp: <span id="temp2"></span></h4>
@@ -69,7 +70,7 @@
                         <h4>Humidity: <span id="humidity2">%</span></h4>
                     </div>
 
-                    <div class="forecastCard" id="third">
+                    <div class="card" id="3">
                         <h3><span id="date3"></span></h3>
                         <img id="icon3">
                         <h4>Temp: <span id="temp3"></span></h4>
@@ -77,7 +78,7 @@
                         <h4>Humidity: <span id="humidity3">%</span></h4>
                     </div>
 
-                    <div class="forecastCard" id="fourth">
+                    <div class="card" id="4">
                         <h3><span id="date4"></span></h3>
                         <img id="icon4">
                         <h4>Temp: <span id="temp4"></span></h4>
@@ -85,7 +86,7 @@
                         <h4>Humidity: <span id="humidity4">%</span></h4>
                     </div>
 
-                    <div class="forecastCard" id="fifth">
+                    <div class="card" id="5">
                         <h3><span id="date5"></span></h3>
                         <img id="icon5">
                         <h4>Temp: <span id="temp5"></span></h4>
@@ -105,8 +106,9 @@
 
 
 
+
     </main>
-    <script src="./Assets/js/script.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 
 
